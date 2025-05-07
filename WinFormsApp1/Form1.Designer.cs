@@ -35,8 +35,8 @@
             linkLabel1 = new LinkLabel();
             button2 = new Button();
             checkBox1 = new CheckBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtPass = new TextBox();
+            txtUser = new TextBox();
             label3 = new Label();
             label1 = new Label();
             closebtn = new Button();
@@ -86,8 +86,8 @@
             panel2.Controls.Add(linkLabel1);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(checkBox1);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtPass);
+            panel2.Controls.Add(txtUser);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(closebtn);
@@ -124,6 +124,7 @@
             button2.TabIndex = 8;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // checkBox1
             // 
@@ -135,22 +136,23 @@
             checkBox1.TabIndex = 7;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // textBox2
+            // txtPass
             // 
-            textBox2.Location = new Point(180, 230);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(185, 27);
-            textBox2.TabIndex = 6;
+            txtPass.Location = new Point(180, 230);
+            txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
+            txtPass.Size = new Size(185, 27);
+            txtPass.TabIndex = 6;
             // 
-            // textBox1
+            // txtUser
             // 
-            textBox1.Location = new Point(180, 172);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(185, 27);
-            textBox1.TabIndex = 5;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtUser.Location = new Point(180, 172);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(185, 27);
+            txtUser.TabIndex = 5;
+            txtUser.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -245,8 +247,8 @@
         private Label label3;
         private Label label1;
         private CheckBox checkBox1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPass;
+        private TextBox txtUser;
         private Button button2;
         private LinkLabel linkLabel1;
     }
